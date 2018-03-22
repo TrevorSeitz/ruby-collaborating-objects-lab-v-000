@@ -9,7 +9,6 @@ class Artist
     @name = name
     @genre = genre
     @songs = []
-    save
     # @@all.each do |artist|
     #   # binding.pry
     #   if artist.name == name
@@ -20,18 +19,6 @@ class Artist
     #   end
     #   # binding.pry
     # end
-  end
-
-  def add_song(song)
-    @songs << song
-    song.artist = self
-  end
-
-  def add_song_by_name(name, genre)
-    song = Song.new(name, genre)
-    @song << song
-    @song.artist = self
-    @song
   end
 
   def save
@@ -46,18 +33,39 @@ class Artist
   def songs
     @songs
   end
-
-  def self.find_or_create_by_name(name)
-    @@all.each do |artist|
-      if artist.name == name
-        return artist
-      else
-        return self.new(name)
-      end
-    end
-    artist
+    
+  def add_song(song)
+    @songs << song
+    song.artist = self
   end
 
+  def add_song_by_name(name, genre)
+    song = Song.new(name, genre)
+    @song << song
+    @song.artist = self
+    @song
+  end
+
+
+  def self.find_or_create_by_name(name)
+    
+      if artist = self.find_by_name(name)
+        return artist
+      else
+        self.create_by_name(name)
+      end
+  end
+
+  def self.find_by_name(name)
+    @@all.detect { |artist| artist.name == name }
+  end
+
+  def self.create_by_name(name)
+      artist = self.new(name)
+      artist.save
+      return artist
+  end
+    
   def print_songs
     @songs.each do |song|
       puts song.name + "\n"
