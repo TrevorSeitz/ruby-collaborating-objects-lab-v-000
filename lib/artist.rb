@@ -9,7 +9,7 @@ class Artist
     @name = name
     @genre = genre
     @songs = []
-    save
+    # save
   end
 
   def add_song(song)
@@ -39,7 +39,6 @@ class Artist
 
   def self.find_or_create_by_name(name)
     @@all.each do |artist|
-      # binding.pry
       if artist.name. == name
         return artist
       else
