@@ -9,17 +9,17 @@ class Artist
     @name = name
     @genre = genre
     @songs = []
-    # save
-    @@all.each do |artist|
-      # binding.pry
-      if artist.name == name
-        return artist
-      else
-        # binding.pry
-        save
-      end
-      # binding.pry
-    end
+    save
+    # @@all.each do |artist|
+    #   # binding.pry
+    #   if artist.name == name
+    #     return artist
+    #   else
+    #     # binding.pry
+    #     save
+    #   end
+    #   # binding.pry
+    # end
   end
 
   # def save
