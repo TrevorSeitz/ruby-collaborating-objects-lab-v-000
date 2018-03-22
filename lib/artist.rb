@@ -9,7 +9,7 @@ class Artist
     @name = name
     @genre = genre
     @songs = []
-    find_or_create_by_name
+    save
   end
 
   def add_song(song)
