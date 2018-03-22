@@ -11,7 +11,7 @@ class Artist
     @songs = []
     # save
     @@all.each do |artist|
-      if artist.name. == name
+      if artist.name == name
         return artist
       else
         save
