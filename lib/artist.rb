@@ -21,6 +21,7 @@ class Artist
     song = Song.new(name, genre)
     @song << song
     song.artist = self
+    @song
   end
 
   def songs
@@ -56,6 +57,7 @@ class Artist
         return self.new(name)
       end
     end
+    artist
   end
 
   def print_songs
