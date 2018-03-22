@@ -34,11 +34,12 @@ class Artist
     @@all.each do |artist|
       if artist.name == name
         return @@all
+        binding.pry
       end
     end
       @@all << self
 
-    binding.pry
+    # binding.pry
     @@all
   end
 
