@@ -37,8 +37,8 @@ class Artist
       end
     end
       @@all << self
-      
-    # binding.pry
+
+    binding.pry
     @@all
   end
 
