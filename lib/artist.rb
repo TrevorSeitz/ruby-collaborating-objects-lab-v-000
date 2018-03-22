@@ -18,7 +18,7 @@ class Artist
         # binding.pry
         save
       end
-      binding.pry
+      # binding.pry
     end
   end
 
