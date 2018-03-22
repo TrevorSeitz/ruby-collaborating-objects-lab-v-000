@@ -42,7 +42,7 @@ class Artist
       if artist.name. == name
         return artist
       else
-        return self.new(name)
+        @@all << self.new(name)
       end
     end
     artist
