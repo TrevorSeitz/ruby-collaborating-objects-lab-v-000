@@ -7,6 +7,8 @@ class Song
 
   def initialize(name)
     @name = name
+    @artist = artist
+    artist.add_song(self)
     @@all << self
   end
 
