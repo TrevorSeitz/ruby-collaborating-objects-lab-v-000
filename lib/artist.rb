@@ -29,11 +29,11 @@ class Artist
   def self.all
     @@all
   end
-  
+
   def songs
     @songs
   end
-    
+
   def add_song(song)
     @songs << song
     song.artist = self
@@ -48,7 +48,7 @@ class Artist
 
 
   def self.find_or_create_by_name(name)
-    
+
       if artist = self.find_by_name(name)
         return artist
       else
@@ -65,7 +65,7 @@ class Artist
       artist.save
       return artist
   end
-    
+
   def print_songs
     @songs.each do |song|
       puts song.name + "\n"
