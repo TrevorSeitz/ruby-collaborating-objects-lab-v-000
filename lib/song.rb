@@ -21,17 +21,8 @@ class Song
   end
 
   def artist_name= (name)
-    song_artist = Artist.find_or_create_by_name(name)
-    @artist = song_artist
+    @artist = Artist.find_or_create_by_name(name)
     @artist.add_song(self)
-    # Artist.add_song(@new_song)
-    # self.artist.name
-    # if (self.name.nil?)
-    #   self.artist = Artist.new(name)
-    # else
-    #   self.artist.name = name
-    # end
-
   end
 
   def save
