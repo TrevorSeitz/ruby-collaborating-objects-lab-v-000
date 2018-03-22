@@ -35,7 +35,9 @@ class Artist
       if artist.name == name
         return @@all
       end
+    end
       @@all << self
+      
     # binding.pry
     @@all
   end
