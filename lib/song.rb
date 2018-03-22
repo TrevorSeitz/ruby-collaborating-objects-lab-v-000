@@ -9,7 +9,7 @@ class Song
     @name = name
     @artist = artist
     artist.add_song(self)
-    @@all << self
+    # @@all << self
   end
 
   def self.new_by_filename(filename)
