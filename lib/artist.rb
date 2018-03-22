@@ -28,9 +28,14 @@ class Artist
   end
 
   def save
-    unless @@all.include?(self.name)
+    # unless @@all.include?(self.name)
+    #   @@all << self
+    # end
+    @@all.each do |artist|
+      if artist.name == name
+        return @@all
+      end
       @@all << self
-    end
     # binding.pry
     @@all
   end
