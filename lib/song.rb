@@ -20,9 +20,11 @@ class Song
     end
   end
 
-  def artist_name= (artist_name)
-    Artist.find_or_create_by_name(artist_name)
-    Artist.add_song(@new_song)
+  def artist_name= (name)
+    song_artist = Artist.find_or_create_by_name(name)
+    @artist = song_artist
+    @artist.add_song(self)
+    # Artist.add_song(@new_song)
     # self.artist.name
     # if (self.name.nil?)
     #   self.artist = Artist.new(name)
