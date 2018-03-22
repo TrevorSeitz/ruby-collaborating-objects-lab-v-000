@@ -15,10 +15,11 @@ class Artist
       if artist.name == name
         return artist
       else
-        binding.pry
+        # binding.pry
         save
       end
     end
+  binding.pry
   end
 
   def add_song(song)
