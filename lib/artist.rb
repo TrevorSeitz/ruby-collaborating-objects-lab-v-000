@@ -22,12 +22,6 @@ class Artist
     # end
   end
 
-  # def save
-  #   @@all << self
-  #   @@all
-  # end
-
-
   def add_song(song)
     @songs << song
     song.artist = self
@@ -40,10 +34,6 @@ class Artist
     @song
   end
 
-  def songs
-    @songs
-  end
-
   def save
     @@all << self
     # @@all
@@ -51,6 +41,10 @@ class Artist
 
   def self.all
     @@all
+  end
+  
+  def songs
+    @songs
   end
 
   def self.find_or_create_by_name(name)
