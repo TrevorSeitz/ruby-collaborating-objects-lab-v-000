@@ -32,6 +32,7 @@ class Artist
     #   @@all << self
     # end
     @@all.each do |artist|
+      binding.pry
       if artist.name == name
         return @@all
       end
