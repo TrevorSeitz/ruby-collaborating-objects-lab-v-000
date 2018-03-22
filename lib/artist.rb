@@ -9,7 +9,14 @@ class Artist
     @name = name
     @genre = genre
     @songs = []
-    save
+    # save
+    @@all.each do |artist|
+      if artist.name. == name
+        return artist
+      else
+        save
+      end
+    end
   end
 
   def add_song(song)
