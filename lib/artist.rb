@@ -11,10 +11,11 @@ class Artist
     @songs = []
     # save
     @@all.each do |artist|
-      binding.pry
+      # binding.pry
       if artist.name == name
         return artist
       else
+        binding.pry
         save
       end
     end
